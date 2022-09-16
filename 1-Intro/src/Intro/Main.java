@@ -3,69 +3,62 @@ package Intro;
 public class Main {
 
 	public static void main(String[] args) {
-		// Gazamız mübarek olsun
-		System.out.println("Hello World!");
+		
+		System.out.println("Hello World");
 
-		// Değişken isimlendirmeleri Java'da camelCase yazılır.
-		// String veri tipi (Metinsel veri tipi)
-		String ortaMetin = "İlginizi Çekebilir";
-		String altMetin = "Vade süresi";
-		System.out.println(ortaMetin);
+        //Java'da değişken adı camelCase olarak yazılır.
 		
-		//integer veri tipi (tam sayı)
-		int vade = 12;
-		System.out.println(altMetin + "	: " + vade);
-		
-		//double veri tipi (ondalık sayı)
-		double dolarDun = 18.25;
-		double dolarBugun = 18.20;
-		System.out.println("Doların dünkü fiyatı	: " + dolarDun);
-		System.out.println("Doların bugünkü fiyatı	: " +dolarBugun);
-		
-		System.out.println("------------------------------------------------------------");
-		
-		// Boolean
-		boolean dolarDustuMu;
-		
-		
-		String okYonu = "";
-		
-		
-		// Koşullu ifadeler
-		if (dolarBugun < dolarDun) {
-			dolarDustuMu = true;
-			okYonu = "down.svg";
-			System.out.println("Dolar düştü.");
-			System.out.println(okYonu);
-			
-		}else if (dolarBugun == dolarDun) {
-			dolarDustuMu = false;
-			System.out.println("Dolar eşit.");
+        String ortaMetin = "İlginizi çekebilir";
+        String altMetin = "Vade Süresi";
+        
 
-		}else {
-			dolarDustuMu = false;
-			okYonu = "up.svg";
-			System.out.println("Dolar yükseldi.");
-			System.out.println(okYonu);
-		}
-		
-		System.out.println("Dolar durumu: " + dolarDustuMu);
-		
-		System.out.println("------------------------------------------------------------");
-		
-		 // Diziler, Listeler
+        System.out.println(ortaMetin);
+
+        //integer (Tamsayı)
+        int vade = 12;
+        
+        System.out.println(altMetin + " : " + vade);
+        
+        //double (Ondalık Sayı)
+        double dolarDun = 18.14;
+        double dolarBugun = 18.20;
+
+        boolean dolarDustuMu = false;
+
+
+        String okYonu = "";
+        
+        //Koşullu İfadeler
+        if(dolarBugun<dolarDun) { //false
+            okYonu = "down.svg";
+            System.out.println(okYonu);
+            System.out.println("Dolar düştü");
+        } else if (dolarBugun>dolarDun){
+            okYonu="up.svg";
+            System.out.println(okYonu);
+            System.out.println("Dolar Yükseldi");
+        }else {
+            okYonu="equal.svg";
+            System.out.println("Dolar eşit");
+        }
+
+
+        // array (Diziler, Listeler)
         String[] krediler = {"Hızlı Kredi", "Maaşını Halkbanktan", "Mutlu Emekli"};
+
+        
         System.out.println(krediler[0]);
         System.out.println(krediler[1]);
         System.out.println(krediler[2]);
+
+
+        // For döngüsü - büyük veri listelerinde tekrar eden işlemlerde kullanılır.
+        for(int i =0; i < krediler.length; i++){
+            System.out.println(krediler[i]);
+        }
         
-        System.out.println("------------------------------------------------------------");
         
-        for(int i =0; i<krediler.length; i++){
-            System.out.println(krediler[i]); 
-            }
-		
-		
+
 	}
 
 }
